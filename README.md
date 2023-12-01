@@ -7,7 +7,11 @@
 ## Usage example
 
 ```sh
-blender ./scenes/preset_0.blend --background  --python ./scripts/preset_0.py --render-anim -- 1 15 180
+blender ./scenes/preset_0.blend \
+--background \
+--python ./scripts/preset_0.py \
+--render-anim \
+-- 1 15 180
 ```
 
 ## Args
