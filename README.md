@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-[EasyBpy](https://github.com/curtisjamesholt/EasyBPY) - follow instalation instructions
+[EasyBpy](https://github.com/curtisjamesholt/EasyBPY) - follow installation instructions
 
 ## Usage example
 
