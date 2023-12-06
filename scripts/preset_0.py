@@ -1,22 +1,22 @@
 from easybpy import *
 import sys
 
+FRAME_START = 1
+FRAME_END = 240
+
 # read command line args
 argv = sys.argv
 argv = argv[argv.index("--") + 1:]  # get all args after "--"
 
+# set output dir
+get_scene().render.filepath = './output/'
+
 # set frame range
-frame_start(int(argv[0]))
-frame_end(int(argv[1]))
+frame_start(FRAME_START)
+frame_end(FRAME_END)
 
-# get pivot object for camera rotation
-pivot = get_object("Pivot")
+# show specified weapon
+weapon = get_object(argv[0])
+unhide(weapon)
+unhide_in_render(weapon)
 
-# insert initial keyframe
-start_frame = add_keyframe(pivot, "rotation_euler", frame_start())
-
-# do rotation
-rotate_around_z(int(argv[2]), pivot)
-
-# insert last keyframe
-end_frame = add_keyframe(pivot, "rotation_euler", frame_end())
